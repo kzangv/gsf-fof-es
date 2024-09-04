@@ -3,8 +3,8 @@ module github.com/kzangv/gsf-fof-es
 go 1.18
 
 require (
-	gitee.com/kzangv/gsf-fof v0.5.2
 	github.com/elastic/go-elasticsearch/v8 v8.2.0
+	github.com/kzangv/gsf-fof v0.0.3
 	github.com/urfave/cli/v2 v2.24.1
 )
 

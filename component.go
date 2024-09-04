@@ -2,8 +2,8 @@ package es
 
 import (
 	"fmt"
-	"gitee.com/kzangv/gsf-fof"
-	"gitee.com/kzangv/gsf-fof/logger"
+	"github.com/kzangv/gsf-fof"
+	"github.com/kzangv/gsf-fof/logger"
 	"github.com/urfave/cli/v2"
 	"strings"
 )
@@ -56,15 +56,15 @@ func (c *Component) Init(log logger.Interface, cfg gsf.Config) error {
 	return nil
 }
 
-func (c *Component) Run(log logger.Interface, appCfg gsf.Config) error {
+func (c *Component) Run(log logger.Interface, cfg gsf.Config) error {
 	for name, clt := range c.Clts {
-		if err := clt.Load(c, name, &c.Cfg, appCfg, log); err != nil {
+		if err := clt.Load(c, name, &c.Cfg, cfg, log); err != nil {
 			return err
 		}
 	}
 	return nil
 }
 
-func (c *Component) Close(_ logger.Interface, _ gsf.Config) (err error) {
+func (c *Component) Close(_ logger.Interface, _ gsf.Config) error {
 	return nil
 }

@@ -3,9 +3,9 @@ package es
 import (
 	"crypto/tls"
 	"fmt"
-	"gitee.com/kzangv/gsf-fof"
-	"gitee.com/kzangv/gsf-fof/logger"
 	"github.com/elastic/go-elasticsearch/v8"
+	"github.com/kzangv/gsf-fof"
+	"github.com/kzangv/gsf-fof/logger"
 	"github.com/urfave/cli/v2"
 	"net"
 	"net/http"
